@@ -41,7 +41,7 @@
 
 CShuangpinData CShuangpinSegmentor::s_shpData;
 
-CShuangpinSegmentor::CShuangpinSegmentor (EShuangpinType shpType)
+CShuangpinSegmentor::CShuangpinSegmentor (CShuangpinData::EShuangpinType shpType)
     : m_updatedFrom(0), m_nAlpha(0), m_hasInvalid(false), m_nLastValidPos(0)
 {
     m_segs.reserve(32);
@@ -65,10 +65,10 @@ CShuangpinSegmentor::pop()
 
     unsigned size = m_inputBuf.size();
 
-    EShuangpinType shpType = s_shpData.getShuangpinType();
+    CShuangpinData::EShuangpinType shpType = s_shpData.getShuangpinType();
     bool isInputPy = (islower(m_pystr[size - 1]) ||
                       (m_pystr[size - 1] == ';' &&
-                       (shpType == MS2003 || shpType == ZIGUANG)));
+                       (shpType == CShuangpinData::MS2003 || shpType == CShuangpinData::ZIGUANG)));
     if (!isInputPy) {
         m_nAlpha -= 1;
     }
@@ -286,7 +286,7 @@ CShuangpinSegmentor::_push(unsigned ch)
 {
     int startFrom = 0;
     bool isInputPy;
-    EShuangpinType shpType;
+    CShuangpinData::EShuangpinType shpType;
 
     m_pystr.push_back(ch);
     const int len = m_pystr.size();
@@ -298,7 +298,7 @@ CShuangpinSegmentor::_push(unsigned ch)
 
     shpType = s_shpData.getShuangpinType();
     isInputPy = (islower(ch) ||
-                 (ch == ';' && (shpType == MS2003 || shpType == ZIGUANG)));
+                 (ch == ';' && (shpType == CShuangpinData::MS2003 || shpType == CShuangpinData::ZIGUANG)));
 
     if (!isInputPy) {
         startFrom = len - 1;

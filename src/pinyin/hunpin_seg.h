@@ -26,7 +26,7 @@
 class CHunpinSegmentor : public IPySegmentor
 {
 public:
-    CHunpinSegmentor (EShuangpinType shpType);
+    CHunpinSegmentor (CShuangpinData::EShuangpinType shpType);
 
     virtual TSegmentVec& getSegments(bool) { return m_segs; }
 

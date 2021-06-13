@@ -254,17 +254,17 @@ preedit_init()
         varchar scheme;
         settings_get(SHUANGPIN_SCHEME, scheme);
         if (strcmp(scheme, "MS2003") == 0) {
-            AShuangpinSchemePolicy::instance().setShuangpinType(MS2003);
+            AShuangpinSchemePolicy::instance().setShuangpinType(CShuangpinData::MS2003);
         } else if (strcmp(scheme, "ABC") == 0) {
-            AShuangpinSchemePolicy::instance().setShuangpinType(ABC);
+            AShuangpinSchemePolicy::instance().setShuangpinType(CShuangpinData::ABC);
         } else if (strcmp(scheme, "ZiRanMa") == 0) {
-            AShuangpinSchemePolicy::instance().setShuangpinType(ZIRANMA);
+            AShuangpinSchemePolicy::instance().setShuangpinType(CShuangpinData::ZIRANMA);
         } else if (strcmp(scheme, "PinYin++") == 0) {
-            AShuangpinSchemePolicy::instance().setShuangpinType(PINYINJIAJIA);
+            AShuangpinSchemePolicy::instance().setShuangpinType(CShuangpinData::PINYINJIAJIA);
         } else if (strcmp(scheme, "ZiGuang") == 0) {
-            AShuangpinSchemePolicy::instance().setShuangpinType(ZIGUANG);
+            AShuangpinSchemePolicy::instance().setShuangpinType(CShuangpinData::ZIGUANG);
         } else if (strcmp(scheme, "XiaoHe") == 0) {
-            AShuangpinSchemePolicy::instance().setShuangpinType(XIAOHE);
+            AShuangpinSchemePolicy::instance().setShuangpinType(CShuangpinData::XIAOHE);
         }
     } else {
         fac.setPinyinScheme(CSunpinyinSessionFactory::QUANPIN);

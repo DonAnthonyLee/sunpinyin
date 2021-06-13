@@ -129,7 +129,7 @@ int main(int argc, char* argv[])
     // CIMIPluginManager& manager = AIMIPluginManager::instance();
     // manager.loadPlugin("someplugin.py");
 
-    //AShuangpinSchemePolicy::instance().setShuangpinType(ZIGUANG);
+    //AShuangpinSchemePolicy::instance().setShuangpinType(CShuangpinData::ZIGUANG);
     CIMIView *pv = factory.createSession ();
 
     CGTKWinHandler *pwh = new CGTKWinHandler(pv);

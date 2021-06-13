@@ -76,7 +76,7 @@ static const char ms2003_mapfinals[FINAL_NUM] =
   'w', 'o', 'y', 'v', 'r', 'p',
   'd', 's', 'v', 't', 't', 's', };
 
-static TZeroInitial ms2003_zeroinitials[] = {
+static CShuangpinData::TZeroInitial ms2003_zeroinitials[] = {
     { "a", "oa" },
     { "ai", "ol" },
     { "an", "oj" },
@@ -106,7 +106,7 @@ static const char abc_mapfinals[FINAL_NUM] =
   'd', 'o', 'c', 'm', 'p', 'n',
   't', 's', 'v', 'm', 'm', 's', };
 
-static TZeroInitial abc_zeroinitials[] = {
+static CShuangpinData::TZeroInitial abc_zeroinitials[] = {
     { "a", "oa" },
     { "ai", "ol" },
     { "an", "oj" },
@@ -135,7 +135,7 @@ static const char ziguang_mapfinals[FINAL_NUM] =
   'x', 'o', 'y', 'n', 'l', 'm',
   'g', 'h', 'v', 'n', 'n', 'h', };
 
-static TZeroInitial ziguang_zeroinitials[] = {
+static CShuangpinData::TZeroInitial ziguang_zeroinitials[] = {
     { "a", "oa" },
     { "ai", "op" },
     { "an", "or" },
@@ -164,7 +164,7 @@ static const char pyjiajia_mapfinals[FINAL_NUM] =
   'b', 'o', 'x', 'v', 'c',
   'z', 'h', 'y', 'v', 'x', 'x', 'y', };
 
-static TZeroInitial pyjiajia_zeroinitials[] = {
+static CShuangpinData::TZeroInitial pyjiajia_zeroinitials[] = {
     { "a", "oa" },
     { "ai", "os" },
     { "an", "of" },
@@ -193,7 +193,7 @@ static const char ziranma_mapfinals[FINAL_NUM] =
   'w', 'o', 'y', 'v', 'r', 'p',
   'd', 's', 'v', 't', 't', 's', };
 
-static TZeroInitial ziranma_zeroinitials[] = {
+static CShuangpinData::TZeroInitial ziranma_zeroinitials[] = {
     { "a", "aa" },
     { "ai", "ai" },
     { "an", "an" },
@@ -222,7 +222,7 @@ static const char xiaohe_mapfinals[FINAL_NUM] =
   'x', 'o', 'k', 'v', 'r', 'y',
   'l', 's', 'v', 't', 't', 's', };
 
-static TZeroInitial xiaohe_zeroinitials[] = {
+static CShuangpinData::TZeroInitial xiaohe_zeroinitials[] = {
     { "a", "aa" },
     { "ai", "ai" },
     { "an", "an" },

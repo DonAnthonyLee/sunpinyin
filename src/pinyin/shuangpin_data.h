@@ -45,43 +45,35 @@
 #include "ime-core/utils.h"
 #include "syllable.h"
 
-enum EShuangpinType {
-    MS2003,
-#ifndef _WIN32
-    // FXIME: maybe namespace ...
-    ABC,
-#else
-    SP_ABC,
-#endif
-    ZIRANMA,
-    PINYINJIAJIA,
-    ZIGUANG,
-    XIAOHE,
-    USERDEFINE,
-};
-#ifdef _WIN32
-#define ABC SP_ABC
-#endif
-
-typedef struct _TZeroinitial {
-    const char  *syl;
-    const char  *mapshp;
-} TZeroInitial;
-
-typedef struct _TShungpinPlan {
-    EShuangpinType type;
-    char *mapinitials;
-    char *mapfinals;
-    TZeroInitial *zeroinitals;
-} TShuangpinPlan;
-
-
 typedef std::vector<std::string>         CMappedYin;
 typedef std::map<std::string, TSyllable> CEncodingMap;
 typedef std::map <char, CMappedYin*>     CKeyMap;
 
 class CShuangpinData : private CNonCopyable
 {
+public:
+    typedef enum {
+        MS2003,
+        ABC,
+        ZIRANMA,
+        PINYINJIAJIA,
+        ZIGUANG,
+        XIAOHE,
+        USERDEFINE,
+    } EShuangpinType;
+
+    typedef struct {
+        const char  *syl;
+        const char  *mapshp;
+    } TZeroInitial;
+
+    typedef struct {
+        EShuangpinType type;
+        char *mapinitials;
+        char *mapfinals;
+        TZeroInitial *zeroinitals;
+    } TShuangpinPlan;
+
 public:
     CShuangpinData (EShuangpinType shpPlan = MS2003);
     ~CShuangpinData ();

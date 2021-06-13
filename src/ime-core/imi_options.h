@@ -161,7 +161,7 @@ public:
         return pseg;
     }
 
-    void setShuangpinType(EShuangpinType t) { m_shuangpinType = t; }
+    void setShuangpinType(CShuangpinData::EShuangpinType t) { m_shuangpinType = t; }
 
     void setFuzzyForwarding(bool enable_fuzzies = true,
                             bool enable_simpler_initials = true){
@@ -180,7 +180,7 @@ public:
     template<class> friend class SingletonHolder;
 protected: ~CShuangpinSchemePolicy () {}
 
-    EShuangpinType m_shuangpinType;
+    CShuangpinData::EShuangpinType m_shuangpinType;
     CGetFuzzySyllablesOp<CPinyinData>   m_getFuzzySyllablesOp;
 };
 
@@ -196,7 +196,7 @@ public:
         return pseg;
     }
 
-    void setShuangpinType(EShuangpinType t) { m_shuangpinType = t; }
+    void setShuangpinType(CShuangpinData::EShuangpinType t) { m_shuangpinType = t; }
 
     void setFuzzyForwarding(bool enable_fuzzies = true,
                             bool enable_simpler_initials = true){
@@ -215,7 +215,7 @@ public:
     template<class> friend class SingletonHolder;
 protected: ~CHunpinSchemePolicy () {}
 
-    EShuangpinType m_shuangpinType;
+    CShuangpinData::EShuangpinType m_shuangpinType;
     CGetFuzzySyllablesOp<CPinyinData>   m_getFuzzySyllablesOp;
 };
 

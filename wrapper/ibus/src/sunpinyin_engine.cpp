@@ -647,8 +647,8 @@ SunPinyinEngine::update_fuzzy_segs()
 void
 SunPinyinEngine::update_shuangpin_type()
 {
-    EShuangpinType shuangpin_type = MS2003;
-    shuangpin_type = (EShuangpinType) m_config.get(SHUANGPIN_TYPE, (int) shuangpin_type);
+    CShuangpinData::EShuangpinType shuangpin_type = CShuangpinData::MS2003;
+    shuangpin_type = (CShuangpinData::EShuangpinType) m_config.get(SHUANGPIN_TYPE, (int) shuangpin_type);
     AShuangpinSchemePolicy::instance().setShuangpinType(shuangpin_type);
 }
 

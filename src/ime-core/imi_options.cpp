@@ -329,7 +329,7 @@ CSimplifiedChinesePolicy::createDirectory(char *path)
 }
 
 CShuangpinSchemePolicy::CShuangpinSchemePolicy()
-    : m_shuangpinType(MS2003)
+    : m_shuangpinType(CShuangpinData::MS2003)
 {
 }
 
@@ -357,7 +357,7 @@ bool
 CShuangpinSchemePolicy::onConfigChanged(const COptionEvent& event)
 {
     if (event.name == SHUANGPIN_TYPE) {
-        setShuangpinType((EShuangpinType)event.get_int());
+        setShuangpinType((CShuangpinData::EShuangpinType)event.get_int());
         return true;
     } else if (event.name == QUANPIN_FUZZY_ENABLED) {
         setFuzzyForwarding(event.get_bool());
@@ -374,7 +374,7 @@ bool
 CHunpinSchemePolicy::onConfigChanged(const COptionEvent& event)
 {
     if (event.name == SHUANGPIN_TYPE) {
-        setShuangpinType((EShuangpinType)event.get_int());
+        setShuangpinType((CShuangpinData::EShuangpinType)event.get_int());
         //刷新segmentor狀態
         COptionEventBus& event_bus = AOptionEventBus::instance();
         event_bus.publishEvent(COptionEvent(PINYIN_SCHEME, -1));        //第二個參數沒有用
@@ -392,7 +392,7 @@ CHunpinSchemePolicy::onConfigChanged(const COptionEvent& event)
 
 
 CHunpinSchemePolicy::CHunpinSchemePolicy()
-    : m_shuangpinType(MS2003)
+    : m_shuangpinType(CShuangpinData::MS2003)
 {
 }
 

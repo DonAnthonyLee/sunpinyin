@@ -17,7 +17,7 @@
 
 CShuangpinData CHunpinSegmentor::s_shpData;
 
-CHunpinSegmentor::CHunpinSegmentor (EShuangpinType shpType)
+CHunpinSegmentor::CHunpinSegmentor (CShuangpinData::EShuangpinType shpType)
     : m_pGetFuzzySyllablesOp(NULL),
       m_pytrie(base, check, value, sizeof(base) / sizeof(*base)),
       m_updatedFrom(0)

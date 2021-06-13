@@ -56,7 +56,7 @@ class SunPinyinConfig
     typedef std::map<std::string,
         CSunpinyinSessionFactory::EPyScheme> SchemeNames;
     typedef std::map<std::string,
-        EShuangpinType> TypeNames;
+        CShuangpinData::EShuangpinType> TypeNames;
 
     SchemeNames        m_scheme_names;
     TypeNames          m_type_names;

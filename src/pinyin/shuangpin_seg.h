@@ -48,7 +48,7 @@
 class CShuangpinSegmentor : public IPySegmentor
 {
 public:
-    CShuangpinSegmentor (EShuangpinType shpType);
+    CShuangpinSegmentor (CShuangpinData::EShuangpinType shpType);
 
     virtual TSegmentVec& getSegments(bool) { return m_segs; }
     virtual const wstring& getInputBuffer() { return m_inputBuf; }
