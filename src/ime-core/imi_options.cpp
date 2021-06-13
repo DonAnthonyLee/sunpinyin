@@ -58,12 +58,24 @@
 #include "imi_view_classic.h"
 
 #ifdef _WIN32
+
+static HINSTANCE sunpinyin_hinst = NULL;
+
+extern "C" {
+BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
+{
+	if (fdwReason == DLL_PROCESS_ATTACH)
+		sunpinyin_hinst = hinstDLL;
+	return TRUE;
+}
+} // extern "C"
+
 char* win32_get_data_dir()
 {
     char buffer[_MAX_PATH + 1];
     memset(buffer, 0, sizeof(buffer));
 
-    if (GetModuleFileName(NULL, buffer, _MAX_PATH) == 0) return NULL;
+    if (GetModuleFileName(sunpinyin_hinst, buffer, _MAX_PATH) == 0) return NULL;
     char *p = strrchr(buffer, '\\');
     *p = '\0'; // locate the directory
 
@@ -95,7 +107,7 @@ char* win32_get_home_dir()
     }
 
     if (buffer[0] == '\0') {
-        if (GetModuleFileName(NULL, buffer, _MAX_PATH) == 0) return NULL;
+        if (GetModuleFileName(sunpinyin_hinst, buffer, _MAX_PATH) == 0) return NULL;
         char *p = strrchr(buffer, '\\');
         *p = '\0'; // locate the directory
 
