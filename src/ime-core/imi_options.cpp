@@ -90,6 +90,23 @@ char* win32_get_data_dir()
     strncat(buffer,
             (unix_style ? "\\share\\sunpinyin" : "\\data"),
             _MAX_PATH - strlen(buffer));
+
+    // NOTE:
+    //  To avoid wrong defination about INVALID_FILE_ATTRIBUTES,
+    //  we use (DWORD)-1 instead.
+    DWORD attr = GetFileAttributes(buffer);
+    if (attr == (DWORD)-1 || (attr & FILE_ATTRIBUTE_DIRECTORY) == 0) { // not exist
+        if (unix_style || p == NULL)
+            return NULL;
+
+        // to find out whether "../data" existed
+        *p = '\0';
+        strncat(buffer, "\\data", _MAX_PATH - strlen(buffer));
+        attr = GetFileAttributes(buffer);
+        if (attr == (DWORD)-1 || (attr & FILE_ATTRIBUTE_DIRECTORY) == 0)
+            return NULL;
+    }
+
     return strdup(buffer);
 }
 
@@ -315,12 +332,16 @@ CSimplifiedChinesePolicy::createDirectory(char *path)
     }
     return !(access(path, F_OK) != 0 && mkdir(path, S_IRWXU) != 0);
 #else
+    DWORD attr;
     char *p = path;
     while ((p = strchr(p + 1, '\\'))) {
         *p = 0;
-        if ((GetFileAttributes(path) & FILE_ATTRIBUTE_DIRECTORY) == 0 && _mkdir(path) != 0) {
-            fprintf(stderr, "mkdir %s: %s\n", path, strerror(errno));
-            return false;
+        attr = GetFileAttributes(path);
+        if (attr == (DWORD)-1 || (attr & FILE_ATTRIBUTE_DIRECTORY) == 0) {
+            if (_mkdir(path) != 0) {
+                fprintf(stderr, "mkdir %s: %s\n", path, strerror(errno));
+                return false;
+            }
         }
         *p = '\\';
     }
