@@ -112,7 +112,7 @@ CThreadSlm::load(const char* fname, bool MMap)
 #else // _WIN32
     HANDLE fd = CreateFile(fname,
                            GENERIC_READ,
-                           0,
+                           FILE_SHARE_READ,
                            NULL,
                            OPEN_EXISTING,
                            FILE_ATTRIBUTE_NORMAL,
