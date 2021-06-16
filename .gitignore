@@ -26,6 +26,10 @@ Makefile.in.in
 *.a
 *.bz2
 .libs
+*.def
+*.exe
+*.dll
+.*.swp
 cscope.out
 
 .sconf_temp/*
