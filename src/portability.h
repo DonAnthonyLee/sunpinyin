@@ -41,6 +41,9 @@
 
 #include <stdio.h>
 #include <math.h>
+#ifdef BEOS_OS
+#define exp2(v) pow(2, v)
+#endif
 #include <stdint.h>
 #include <string>
 #include <cstring>
@@ -54,6 +57,12 @@
 #endif //__cpluscplus
 #endif //ifdef HAVE_UNISTD_H
 
+#ifdef __GNUC__
+#if __GNUC__ < 3
+#define HOST_OS_GNUC_2
+#endif
+#endif
+
 #ifndef HOST_OS_GNUC_2
     #if defined(DEBUG) && !defined(NDEBUG)
         #define DEBUG_print(fmt, ...)   fprintf(stderr, fmt, ...)
@@ -62,9 +71,9 @@
     #endif
 #else // HOST_OS_GNUC_2
     #if defined(DEBUG) && !defined(NDEBUG)
-        #define DEBUG_print(fmt, a ...)   fprintf(stderr, fmt, a ...)
+        #define DEBUG_print(fmt, a...)    fprintf(stderr, fmt, a...)
     #else
-        #define DEBUG_print(fmt, a ...)   (int(0))
+        #define DEBUG_print(fmt, a...)    (int(0))
     #endif
 #endif // !HOST_OS_GNUC_2
 

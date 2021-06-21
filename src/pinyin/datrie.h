@@ -41,16 +41,26 @@
 
 #include "portability.h"
 
+#ifndef HOST_OS_GNUC_2
 template <unsigned lower, unsigned upper>
-unsigned character_based_encoder(unsigned ch){
+unsigned int character_based_encoder(unsigned ch){
     int ret = ch - lower + 1;
     if (ret <= 0) ret = upper + 1;
     return ret;
 }
+#define CHARACTER_BASED_ENCODER character_based_encoder<'a', 'z'>
+#else
+inline unsigned int character_based_encoder(unsigned ch){
+    int ret = ch - (signed)'a' + 1;
+    if (ret <= 0) ret = (signed)'z' + 1;
+    return ret;
+}
+#define CHARACTER_BASED_ENCODER character_based_encoder
+#endif
 
 typedef unsigned (*encoder_func_ptr)(unsigned ch);
 template <typename T, encoder_func_ptr encoder =
-              character_based_encoder<'a', 'z'> >
+              CHARACTER_BASED_ENCODER >
 class CDATrie
 {
 private:
