@@ -210,7 +210,7 @@ def allinc():
     return [root for root, _, _ in os.walk('src')]
 
 def GetOS():
-    if os.getenv('PLATFORM') != '':
+    if os.getenv('PLATFORM') not in ('', None):
         return os.getenv('PLATFORM')
     if 'MINGW' in platform.uname():
         return 'Win32'
