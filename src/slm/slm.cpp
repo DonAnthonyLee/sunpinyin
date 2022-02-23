@@ -35,7 +35,10 @@
  * to such option by the copyright holder.
  */
 
+#ifndef _WIN32
 #include <unistd.h>
+#endif
+
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\ime-core\imi_context.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\imi_data.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\imi_funcobjs.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\imi_option_event.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\imi_options.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\imi_uiobjects.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\imi_view.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\imi_view_classic.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\imi_winHandler.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\userdict.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pinyin\hunpin_seg.cpp">
+      <Filter>Source files\pinyin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pinyin\pinyin_seg.cpp">
+      <Filter>Source files\pinyin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pinyin\pinyin_data.cpp">
+      <Filter>Source files\pinyin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pinyin\shuangpin_data.cpp">
+      <Filter>Source files\pinyin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\pinyin\shuangpin_seg.cpp">
+      <Filter>Source files\pinyin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\slm\slm.cpp">
+      <Filter>Source files\slm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\lexicon\pytrie.cpp">
+      <Filter>Source files\lexicon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\lattice_states.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ime-core\ic_history.cpp">
+      <Filter>Source files\ime-core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\portability.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\ime-core">
+      <UniqueIdentifier>{6cebc9bb-7d02-4c1a-b3b2-0e9a25d1c4ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\pinyin">
+      <UniqueIdentifier>{1c43bae7-fd0b-43c4-9579-98a087505118}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\slm">
+      <UniqueIdentifier>{93176240-6c08-445a-8383-f5f708722fbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\lexicon">
+      <UniqueIdentifier>{a9ad0de6-8b67-42e7-96f6-671b5f2612a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files\slm">
+      <UniqueIdentifier>{e83dce2a-17a3-4bfd-8c14-ef316090bd30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files\slm\slmpack">
+      <UniqueIdentifier>{f2ce99a8-c403-4a2b-a9a6-9c80d368d053}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files\slm\ids2ngram">
+      <UniqueIdentifier>{7edd61f1-be3f-4288-a4a8-de0998f3a1b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files\slm\thread">
+      <UniqueIdentifier>{de9d8651-42d1-4fa6-9459-6d63fbce5c3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files\slm\slmbuild">
+      <UniqueIdentifier>{7012c104-2ebe-4a5d-ba42-f1b43409a2c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files\slm\tslmendian">
+      <UniqueIdentifier>{1b215794-0c77-4ee6-b725-27d833c39853}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files\lexicon">
+      <UniqueIdentifier>{4ccdbf30-de25-4894-ab9d-9e4856030006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files\ime-core">
+      <UniqueIdentifier>{2f8a18f1-c964-4dba-8762-ea6f8d0bebf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head files\pinyin">
+      <UniqueIdentifier>{43f30c7c-95c8-4f0c-8c96-9fc6bbece2f5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\slm\sim_dict.h">
+      <Filter>Head files\slm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\sim_sen.h">
+      <Filter>Head files\slm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\slm.h">
+      <Filter>Head files\slm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\sim_slm.h">
+      <Filter>Head files\slm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\sim_fmerge.h">
+      <Filter>Head files\slm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\slmpack\arpa_slm.h">
+      <Filter>Head files\slm\slmpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\slmpack\common.h">
+      <Filter>Head files\slm\slmpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\ids2ngram\idngram.h">
+      <Filter>Head files\slm\ids2ngram</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\ids2ngram\idngram_merge.h">
+      <Filter>Head files\slm\ids2ngram</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\thread\ValueCompress.h">
+      <Filter>Head files\slm\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\slmbuild\sim_slmbuilder.h">
+      <Filter>Head files\slm\slmbuild</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\tslmendian\slm_file.h">
+      <Filter>Head files\slm\tslmendian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\slm\tslmendian\writer.h">
+      <Filter>Head files\slm\tslmendian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\lexicon\trie_writer.h">
+      <Filter>Head files\lexicon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\lexicon\pytrie.h">
+      <Filter>Head files\lexicon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\lexicon\pytrie_gen.h">
+      <Filter>Head files\lexicon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pinyin\datrie.h">
+      <Filter>Head files\pinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pinyin\datrie_impl.h">
+      <Filter>Head files\pinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pinyin\hunpin_seg.h">
+      <Filter>Head files\pinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pinyin\pinyin_data.h">
+      <Filter>Head files\pinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pinyin\pinyin_seg.h">
+      <Filter>Head files\pinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pinyin\quanpin_trie.h">
+      <Filter>Head files\pinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pinyin\segmentor.h">
+      <Filter>Head files\pinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pinyin\shuangpin_seg.h">
+      <Filter>Head files\pinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_option_keys.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_options.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_uiobjects.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_view.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_view_classic.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_winHandler.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\lattice_states.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\userdict.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\ic_history.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_context.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_defines.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_funcobjs.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\portability.h">
+      <Filter>Head files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\sunpinyin.h">
+      <Filter>Head files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

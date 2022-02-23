@@ -36,16 +36,22 @@
  */
 
 #ifdef HAVE_CONFIG_H
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <config-win32-msvc.h>
+#else
 #include <config.h>
+#endif
 #endif
 
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdint.h>
-#include <unistd.h>
 #include <cassert>
 #ifndef _WIN32
+#include <unistd.h>
 #include <arpa/inet.h>
+#else
+#include <windows.h>
 #endif
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -181,8 +187,9 @@ bool
 CBigramHistory::loadFromFile(const char *fname)
 {
     m_history_path = fname;
-
     bool suc = false;
+
+#ifndef _WIN32
     int fd = open(fname, O_CREAT, 0600);
     if (fd == -1) {
         suc = loadFromBuffer(NULL, 0);
@@ -199,6 +206,27 @@ CBigramHistory::loadFromFile(const char *fname)
         free(buf);
     }
     close(fd);
+#else // _WIN32
+    HANDLE fd = CreateFile(fname, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+    if (fd != INVALID_HANDLE_VALUE) {
+            LARGE_INTEGER li;
+            li.HighPart = 0;
+
+            SetFilePointer(fd, 0, NULL, FILE_END);
+            if((li.LowPart = SetFilePointer(fd, 0, &li.HighPart, FILE_CURRENT)) != -1 && li.HighPart == 0) {
+                void* buf = malloc((size_t)li.QuadPart);
+                if (buf) {
+                        DWORD nRead = 0;
+                        SetFilePointer(fd, 0, NULL, FILE_BEGIN);
+                        ReadFile(fd, buf, (DWORD)li.QuadPart, &nRead, NULL);
+                        if (nRead == (DWORD)li.QuadPart)
+                            suc = loadFromBuffer(buf, (size_t)li.QuadPart);
+                        free(buf);
+                }
+            }
+            CloseHandle(fd);
+    }
+#endif
     return suc;
 }
 
@@ -211,6 +239,7 @@ CBigramHistory::saveToFile(const char *fname)
     bool suc = false;
     size_t sz = 0;
     void* buf = NULL;
+#ifndef _WIN32
     if (bufferize(&buf, &sz) && buf) {
         FILE* fp = fopen(fname, "wb");
         if (fp) {
@@ -219,6 +248,21 @@ CBigramHistory::saveToFile(const char *fname)
         }
         free(buf);
     }
+#else
+    if (bufferize(&buf, &sz) && buf) {
+            HANDLE fd = CreateFile(fname,
+                    GENERIC_READ | GENERIC_WRITE,
+                    FILE_SHARE_READ | FILE_SHARE_WRITE,
+                    NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+            if (fd != INVALID_HANDLE_VALUE) {
+                    DWORD nWrote = sz;
+                    SetFilePointer(fd, 0, NULL, FILE_BEGIN);
+                    WriteFile(fd, buf, nWrote, &nWrote, NULL);
+                    suc = (nWrote == sz);
+                    CloseHandle(fd);
+            }
+    }
+#endif
     return suc;
 }
 

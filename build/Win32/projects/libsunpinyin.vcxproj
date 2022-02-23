@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{c0aa983b-83ef-4ce5-b277-172fdf43b6c9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>libsunpinyin</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">x86\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">x86\$(Configuration)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">x86\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">x86\$(Configuration)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>libsunpinyin</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>libsunpinyin</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(OutDir)..\..\..\..\..;$(OutDir)..\..\..\..\..\src;$(OutDir)..\..\..\..\..\src\ime-core;$(OutDir)..\..\..\..\..\src\lexicon;$(OutDir)..\..\..\..\..\src\pinyin;$(OutDir)..\..\..\..\..\src\slm;$(OutDir)..\..\..\..\..\src\slm\getwordfreq;$(OutDir)..\..\..\..\..\src\slm\ids2ngram;$(OutDir)..\..\..\..\..\src\slm\mmseg;$(OutDir)..\..\..\..\..\src\slm\slmbuild;$(OutDir)..\..\..\..\..\src\slm\slminfo;$(OutDir)..\..\..\..\..\src\slm\slmpack;$(OutDir)..\..\..\..\..\src\slm\slmprune;$(OutDir)..\..\..\..\..\src\slm\slmseg;$(OutDir)..\..\..\..\..\src\slm\thread;$(OutDir)..\..\..\..\..\src\slm\tools;$(OutDir)..\..\..\..\..\src\slm\tslmendian;$(OutDir)..\..\..\..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;msvcrtd.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)libsunpinyin.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(OutDir)..\..\..\..\..;$(OutDir)..\..\..\..\..\src;$(OutDir)..\..\..\..\..\src\ime-core;$(OutDir)..\..\..\..\..\src\lexicon;$(OutDir)..\..\..\..\..\src\pinyin;$(OutDir)..\..\..\..\..\src\slm;$(OutDir)..\..\..\..\..\src\slm\getwordfreq;$(OutDir)..\..\..\..\..\src\slm\ids2ngram;$(OutDir)..\..\..\..\..\src\slm\mmseg;$(OutDir)..\..\..\..\..\src\slm\slmbuild;$(OutDir)..\..\..\..\..\src\slm\slminfo;$(OutDir)..\..\..\..\..\src\slm\slmpack;$(OutDir)..\..\..\..\..\src\slm\slmprune;$(OutDir)..\..\..\..\..\src\slm\slmseg;$(OutDir)..\..\..\..\..\src\slm\thread;$(OutDir)..\..\..\..\..\src\slm\tools;$(OutDir)..\..\..\..\..\src\slm\tslmendian;$(OutDir)..\..\..\..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;msvcrtd.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)libsunpinyin.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OutDir)..\..\..\..\..;$(OutDir)..\..\..\..\..\src;$(OutDir)..\..\..\..\..\src\ime-core;$(OutDir)..\..\..\..\..\src\lexicon;$(OutDir)..\..\..\..\..\src\pinyin;$(OutDir)..\..\..\..\..\src\slm;$(OutDir)..\..\..\..\..\src\slm\getwordfreq;$(OutDir)..\..\..\..\..\src\slm\ids2ngram;$(OutDir)..\..\..\..\..\src\slm\mmseg;$(OutDir)..\..\..\..\..\src\slm\slmbuild;$(OutDir)..\..\..\..\..\src\slm\slminfo;$(OutDir)..\..\..\..\..\src\slm\slmpack;$(OutDir)..\..\..\..\..\src\slm\slmprune;$(OutDir)..\..\..\..\..\src\slm\slmseg;$(OutDir)..\..\..\..\..\src\slm\thread;$(OutDir)..\..\..\..\..\src\slm\tools;$(OutDir)..\..\..\..\..\src\slm\tslmendian;$(OutDir)..\..\..\..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;msvcrt.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrtd.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OutDir)..\..\..\..\..;$(OutDir)..\..\..\..\..\src;$(OutDir)..\..\..\..\..\src\ime-core;$(OutDir)..\..\..\..\..\src\lexicon;$(OutDir)..\..\..\..\..\src\pinyin;$(OutDir)..\..\..\..\..\src\slm;$(OutDir)..\..\..\..\..\src\slm\getwordfreq;$(OutDir)..\..\..\..\..\src\slm\ids2ngram;$(OutDir)..\..\..\..\..\src\slm\mmseg;$(OutDir)..\..\..\..\..\src\slm\slmbuild;$(OutDir)..\..\..\..\..\src\slm\slminfo;$(OutDir)..\..\..\..\..\src\slm\slmpack;$(OutDir)..\..\..\..\..\src\slm\slmprune;$(OutDir)..\..\..\..\..\src\slm\slmseg;$(OutDir)..\..\..\..\..\src\slm\thread;$(OutDir)..\..\..\..\..\src\slm\tools;$(OutDir)..\..\..\..\..\src\slm\tslmendian;$(OutDir)..\..\..\..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;msvcrt.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrtd.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\portability.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\ic_history.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\imi_context.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\imi_data.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\imi_funcobjs.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\imi_options.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\imi_option_event.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\imi_uiobjects.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\imi_view.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\imi_view_classic.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\imi_winHandler.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\lattice_states.cpp" />
+    <ClCompile Include="..\..\..\src\ime-core\userdict.cpp" />
+    <ClCompile Include="..\..\..\src\lexicon\pytrie.cpp" />
+    <ClCompile Include="..\..\..\src\pinyin\hunpin_seg.cpp" />
+    <ClCompile Include="..\..\..\src\pinyin\pinyin_data.cpp" />
+    <ClCompile Include="..\..\..\src\pinyin\pinyin_seg.cpp" />
+    <ClCompile Include="..\..\..\src\pinyin\shuangpin_data.cpp" />
+    <ClCompile Include="..\..\..\src\pinyin\shuangpin_seg.cpp" />
+    <ClCompile Include="..\..\..\src\slm\slm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\ime-core\ic_history.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_context.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_defines.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_funcobjs.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_options.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_option_keys.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_uiobjects.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_view.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_view_classic.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_winHandler.h" />
+    <ClInclude Include="..\..\..\src\ime-core\lattice_states.h" />
+    <ClInclude Include="..\..\..\src\ime-core\userdict.h" />
+    <ClInclude Include="..\..\..\src\lexicon\pytrie.h" />
+    <ClInclude Include="..\..\..\src\lexicon\pytrie_gen.h" />
+    <ClInclude Include="..\..\..\src\lexicon\trie_writer.h" />
+    <ClInclude Include="..\..\..\src\pinyin\datrie.h" />
+    <ClInclude Include="..\..\..\src\pinyin\datrie_impl.h" />
+    <ClInclude Include="..\..\..\src\pinyin\hunpin_seg.h" />
+    <ClInclude Include="..\..\..\src\pinyin\pinyin_data.h" />
+    <ClInclude Include="..\..\..\src\pinyin\pinyin_seg.h" />
+    <ClInclude Include="..\..\..\src\pinyin\quanpin_trie.h" />
+    <ClInclude Include="..\..\..\src\pinyin\segmentor.h" />
+    <ClInclude Include="..\..\..\src\pinyin\shuangpin_seg.h" />
+    <ClInclude Include="..\..\..\src\portability.h" />
+    <ClInclude Include="..\..\..\src\slm\ids2ngram\idngram.h" />
+    <ClInclude Include="..\..\..\src\slm\ids2ngram\idngram_merge.h" />
+    <ClInclude Include="..\..\..\src\slm\sim_dict.h" />
+    <ClInclude Include="..\..\..\src\slm\sim_fmerge.h" />
+    <ClInclude Include="..\..\..\src\slm\sim_sen.h" />
+    <ClInclude Include="..\..\..\src\slm\sim_slm.h" />
+    <ClInclude Include="..\..\..\src\slm\slm.h" />
+    <ClInclude Include="..\..\..\src\slm\slmbuild\sim_slmbuilder.h" />
+    <ClInclude Include="..\..\..\src\slm\slmpack\arpa_slm.h" />
+    <ClInclude Include="..\..\..\src\slm\slmpack\common.h" />
+    <ClInclude Include="..\..\..\src\slm\thread\ValueCompress.h" />
+    <ClInclude Include="..\..\..\src\slm\tslmendian\slm_file.h" />
+    <ClInclude Include="..\..\..\src\slm\tslmendian\writer.h" />
+    <ClInclude Include="..\..\..\src\sunpinyin.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -36,7 +36,11 @@
  */
 
 #ifdef HAVE_CONFIG_H
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <config-win32-msvc.h>
+#else
 #include <config.h>
+#endif
 #endif
 
 #include <algorithm>
@@ -225,6 +229,13 @@ CSimplifiedChinesePolicy::loadResources()
 
     std::string user_dict_path = m_user_data_dir + sep + "userdict";
     suc &= m_userDict.load(user_dict_path.c_str());
+
+#if 1
+    fprintf(stderr, "data_dir = %s\n", data_dir.c_str());
+    fprintf(stderr, "m_user_data_dir = %s\n", m_user_data_dir.c_str());
+    fprintf(stderr, "history_path = %s\n", history_path.c_str());
+    fprintf(stderr, "user_dict_path = %s\n", user_dict_path.c_str());
+#endif
 
     m_bTried = true;
     return m_bLoaded = suc;

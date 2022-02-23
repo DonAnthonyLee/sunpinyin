@@ -36,7 +36,11 @@
  */
 
 #ifdef HAVE_CONFIG_H
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <config-win32-msvc.h>
+#else
 #include <config.h>
+#endif
 #endif
 
 #include "imi_view.h"
