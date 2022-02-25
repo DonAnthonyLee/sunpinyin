@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <fcntl.h>
+#ifndef _WIN32
 #include <unistd.h>
+#else
+#include <windows.h>
+#endif
 #include <deque>
 
 #include "pytrie.h"
@@ -77,6 +81,7 @@ CPinyinTrie::load(const char *fname)
     free();
 
     bool suc = false;
+#ifndef _WIN32
     int fd = open(fname, O_RDONLY);
     if (fd == -1) return false;
 
@@ -93,6 +98,25 @@ CPinyinTrie::load(const char *fname)
     suc = suc && (read(fd, m_mem, m_Size) > 0);
 #endif
     close(fd);
+#else // _WIN32
+    HANDLE fd = CreateFile(fname, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+    if (fd != INVALID_HANDLE_VALUE) {
+            LARGE_INTEGER li;
+            li.HighPart = 0;
+
+            SetFilePointer(fd, 0, NULL, FILE_END);
+            if ((li.LowPart = SetFilePointer(fd, 0, &li.HighPart, FILE_CURRENT)) != -1 && li.HighPart == 0) {
+                    m_Size = (size_t)li.QuadPart;
+                    if ((m_mem = new char[m_Size]) != NULL) {
+                            DWORD nRead = 0;
+                            SetFilePointer(fd, 0, NULL, FILE_BEGIN);
+                            ReadFile(fd, m_mem, (DWORD)li.QuadPart, &nRead, NULL);
+                            suc = (nRead == (DWORD)li.QuadPart);
+                    }
+            }
+            CloseHandle(fd);
+    }
+#endif // !_WIN32
 
     suc = suc && ((m_words = new TWCHAR*[getWordCount()]) != NULL);
 
@@ -108,6 +132,7 @@ CPinyinTrie::load(const char *fname)
                 m_SymbolMap[wstring(m_words[i])] = i;
         }
     }
+
     return suc;
 }
 

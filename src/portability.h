@@ -39,6 +39,14 @@
 #ifndef ___SUN_SLM_PORTABILITY_H___
 #define ___SUN_SLM_PORTABILITY_H___
 
+#ifdef HAVE_CONFIG_H
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <config-win32-msvc.h>
+#else
+#include <config.h>
+#endif
+#endif
+
 #include <stdio.h>
 #include <math.h>
 #ifdef BEOS_OS
@@ -333,6 +341,10 @@ inline long distance(Iterator pos1, Iterator pos2){
     distance(pos1, pos2, d);
     return d;
 }
+#endif
+
+#ifndef min_c
+#define min_c(a, b)     ((a) > (b) ? (b) : (a))
 #endif
 
 #endif

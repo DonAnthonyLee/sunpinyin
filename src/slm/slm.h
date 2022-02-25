@@ -40,7 +40,11 @@
 #define _SUN_AGC_SLM_H
 
 #ifdef HAVE_CONFIG_H
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <config-win32-msvc.h>
+#else
 #include <config.h>
+#endif
 #endif
 
 #include "../portability.h"

@@ -14,6 +14,9 @@
 #include "pinyin_seg.h"
 #include "quanpin_trie.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 CShuangpinData CHunpinSegmentor::s_shpData;
 

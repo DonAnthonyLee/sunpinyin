@@ -124,4 +124,6 @@
 # error can not detect the endianness!
 #endif
 
+#define ssize_t long
+
 #endif /* CONFIG_H_SEEN */

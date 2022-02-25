@@ -47,6 +47,7 @@
 
 #include <algorithm>
 #include <climits>
+#include <iterator>
 
 class CGetCorrectionPairOp : private CNonCopyable
 {

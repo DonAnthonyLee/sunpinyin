@@ -271,29 +271,29 @@ string_pairs
 CSimplifiedChinesePolicy::getDefaultPunctMapping() const
 {
     static const char* punc_map [] = {
-        " ", "　",
-        ",", "，",
-        ";", "；",
-        "!", "！",
-        "?", "？",
-        ".", "。",
-        ":", "：",
-        "^", "……",
-        "\\", "、",
-        "\"", "“",
-        "\"", "”",
-        "'", "‘",
-        "'", "’",
-        "_", "——",
-        "<", "《",
-        ">", "》",
-        "(", "（",
-        ")", "）",
-        "[", "【",
-        "]", "】",
-        "{", "『",
-        "}", "』",
-        "$", "￥",
+        " ", "\xe3\x80\x80", // "　",
+        ",", "\xef\xbc\x8c", // "，",
+        ";", "\xef\xbc\x9b", // "；",
+        "!", "\xef\xbc\x81", // "！",
+        "?", "\xef\xbc\x9f", // "？",
+        ".", "\xe3\x80\x82", // "。",
+        ":", "\xef\xbc\x9a", // "：",
+        "^", "\xe2\x80\xa6\xe2\x80\xa6", // "……",
+        "\\", "\xe3\x80\x81", // "、",
+        "\"", "\xe2\x80\x9c", // "“",
+        "\"", "\xe2\x80\x9d", // "”",
+        "'", "\xe2\x80\x98", // "‘",
+        "'", "\xe2\x80\x99", // "’",
+        "_", "\xe2\x80\x94\xe2\x80\x94", // "——",
+        "<", "\xe3\x80\x8a", // "《",
+        ">", "\xe3\x80\x8b", // "》",
+        "(", "\xef\xbc\x88", // "（",
+        ")", "\xef\xbc\x89", // "）",
+        "[", "\xe3\x80\x90", // "【",
+        "]", "\xe3\x80\x91", // "】",
+        "{", "\xe3\x80\x8e", // "『",
+        "}", "\xe3\x80\x8f", // "』",
+        "$", "\xef\xbf\xa5", // "￥",
         NULL,
     };
 
@@ -407,9 +407,9 @@ CHunpinSchemePolicy::onConfigChanged(const COptionEvent& event)
 {
     if (event.name == SHUANGPIN_TYPE) {
         setShuangpinType((CShuangpinData::EShuangpinType)event.get_int());
-        //刷新segmentor狀態
+
         COptionEventBus& event_bus = AOptionEventBus::instance();
-        event_bus.publishEvent(COptionEvent(PINYIN_SCHEME, -1));        //第二個參數沒有用
+        event_bus.publishEvent(COptionEvent(PINYIN_SCHEME, -1));
         return true;
     } else if (event.name == QUANPIN_FUZZY_ENABLED) {
         setFuzzyForwarding(event.get_bool());

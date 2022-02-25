@@ -1,6 +1,8 @@
 # 用 Visual Studio 编译
 
-+ TODO
++ 在此文件夹下新建立子文件夹 libs
++ 将 sqlite 编译后的文件夹（需命名为 sqlite-build）移动到 libs 文件夹中
++ 打开 build/Win32/libsunpinyin.sln 项目即可进行编译
 
 # 跨平台编译
 

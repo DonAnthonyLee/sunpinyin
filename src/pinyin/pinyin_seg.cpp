@@ -197,9 +197,9 @@ CGetFuzzySegmentsOp::operator ()(IPySegmentor::TSegmentVec& segs,
         }
     }
 
-RETURN:;
+RETURN:
 
-    return std::min(updatedFrom, invalidatedFrom);
+    return min_c(updatedFrom, invalidatedFrom);
 }
 
 
@@ -457,8 +457,8 @@ RETURN:;
 
     if (m_pGetFuzzySegmentsOp && m_pGetFuzzySegmentsOp->isEnabled())
         ret =
-            std::min(ret,
-                     (*m_pGetFuzzySegmentsOp)(m_segs, m_fuzzy_segs, m_inputBuf));
+            min_c(ret,
+                  (*m_pGetFuzzySegmentsOp)(m_segs, m_fuzzy_segs, m_inputBuf));
 
     if (m_pGetFuzzySyllablesOp && m_pGetFuzzySyllablesOp->isEnabled()) {
         if (m_segs.back().m_type == SYLLABLE)

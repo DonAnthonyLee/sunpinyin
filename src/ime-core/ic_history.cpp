@@ -255,10 +255,10 @@ CBigramHistory::saveToFile(const char *fname)
                     FILE_SHARE_READ | FILE_SHARE_WRITE,
                     NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
             if (fd != INVALID_HANDLE_VALUE) {
-                    DWORD nWrote = sz;
+                    DWORD nWrote = (DWORD)sz;
                     SetFilePointer(fd, 0, NULL, FILE_BEGIN);
                     WriteFile(fd, buf, nWrote, &nWrote, NULL);
-                    suc = (nWrote == sz);
+                    suc = (nWrote == (DWORD)sz);
                     CloseHandle(fd);
             }
     }
@@ -327,7 +327,7 @@ CBigramHistory::uniFreq(TUnigram& ug)
                  i++) {
                 if (*rit == ug)
                     freq += 1.0 / focus_memory_ratio;
-                *rit++;
+                rit++;
             }
         }
     }

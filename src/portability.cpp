@@ -36,7 +36,11 @@
  */
 
 #ifdef HAVE_CONFIG_H
-#include "config.h"
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <config-win32-msvc.h>
+#else
+#include <config.h>
+#endif
 #endif
 
 #ifdef HAVE_ASSERT_H
@@ -194,7 +198,7 @@ MBSTOWCS(TWCHAR *pwcs, const char* s, size_t n)
     const unsigned char *src = (const unsigned char*)s;
     TWCHAR* dst = pwcs;
 
-    while (dst - pwcs < (ssize_t)n) {
+    while ((size_t)(dst - pwcs) < n) {
         if (*src < 0xc0 || *src >= 0xfe) {
             if (*src < 0x80) *dst++ = *src;
             if (*src++ == 0) break;
@@ -225,7 +229,7 @@ WCSTOMBS(char* s, const TWCHAR* pwcs, size_t n)
 {
     char* dst = s;
 
-    while (dst - s < n) {
+    while ((size_t)(dst - s) < n) {
         if (*pwcs < 0x80 || *pwcs > 0x10ffff) {
             if (*pwcs < 0x80) *dst++ = *pwcs;
             if (*pwcs++ == 0) break;
@@ -234,7 +238,7 @@ WCSTOMBS(char* s, const TWCHAR* pwcs, size_t n)
 
         int bytes = *pwcs < 0x800 ? 2 : (*pwcs < 0xffff ? 3 : 4);
         dst += bytes;
-        if (dst - s > n) return -1;
+        if ((size_t)(dst - s) > n) return -1;
 
         TWCHAR c = *pwcs++;
         int nbyte = bytes;

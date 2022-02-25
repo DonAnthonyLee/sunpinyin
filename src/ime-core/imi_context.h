@@ -42,7 +42,11 @@
 #include "portability.h"
 
 #ifdef HAVE_CONFIG_H
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <config-win32-msvc.h>
+#else
 #include <config.h>
+#endif
 #endif
 
 #if defined(DEBUG) && defined (HAVE_ASSET_H)
