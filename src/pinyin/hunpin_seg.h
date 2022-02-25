@@ -20,10 +20,11 @@
 #include "shuangpin_data.h"
 #include "segmentor.h"
 #include "pinyin_data.h"
+#include "portability.h"
 #include <vector>
 #include <limits.h>
 
-class CHunpinSegmentor : public IPySegmentor
+class _IMPEXP CHunpinSegmentor : public IPySegmentor
 {
 public:
     CHunpinSegmentor (CShuangpinData::EShuangpinType shpType);

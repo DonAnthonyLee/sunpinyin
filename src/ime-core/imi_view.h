@@ -48,7 +48,7 @@
 #include "utils.h"
 #include <set>
 
-class CHotkeyProfile : private CNonCopyable
+class _IMPEXP CHotkeyProfile : private CNonCopyable
 {
 public:
     CHotkeyProfile();
@@ -149,7 +149,7 @@ protected:
     CKeyEvent m_prevKey;
 };
 
-class CIMIView {
+class _IMPEXP CIMIView {
 public:
     enum {
         KEYEVENT_USED  = (1),

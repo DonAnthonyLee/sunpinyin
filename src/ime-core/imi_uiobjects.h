@@ -193,7 +193,7 @@ public:
     /*@}*/
 };
 
-class CCandidateList : virtual public ICandidateList {
+class _IMPEXP CCandidateList : virtual public ICandidateList {
 public:
     CCandidateList();
 

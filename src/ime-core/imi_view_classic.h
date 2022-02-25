@@ -43,7 +43,7 @@
 
 #include "imi_view.h"
 
-class CIMIClassicView : public CIMIView
+class _IMPEXP CIMIClassicView : public CIMIView
 {
 public:
     CIMIClassicView();

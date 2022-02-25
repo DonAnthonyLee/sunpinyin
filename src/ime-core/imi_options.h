@@ -55,7 +55,7 @@
 #define SUNPINYIN_USERDATA_DIR_PREFIX ".sunpinyin"
 #endif
 
-struct CSimplifiedChinesePolicy : public IConfigurable {
+struct _IMPEXP CSimplifiedChinesePolicy : public IConfigurable {
     CSimplifiedChinesePolicy ();
 
     bool loadResources();
@@ -103,7 +103,7 @@ public:
 
 typedef SingletonHolder<CSimplifiedChinesePolicy> ASimplifiedChinesePolicy;
 
-struct CQuanpinSchemePolicy : IConfigurable {
+struct _IMPEXP CQuanpinSchemePolicy : IConfigurable {
 public:
 
     IPySegmentor* createPySegmentor(){
@@ -151,7 +151,7 @@ protected: ~CQuanpinSchemePolicy () {}
 
 typedef SingletonHolder<CQuanpinSchemePolicy> AQuanpinSchemePolicy;
 
-struct CShuangpinSchemePolicy : public IConfigurable {
+struct _IMPEXP CShuangpinSchemePolicy : public IConfigurable {
 public:
     CShuangpinSchemePolicy();
 
@@ -186,7 +186,7 @@ protected: ~CShuangpinSchemePolicy () {}
 
 typedef SingletonHolder<CShuangpinSchemePolicy> AShuangpinSchemePolicy;
 
-struct  CHunpinSchemePolicy : public IConfigurable {
+struct _IMPEXP CHunpinSchemePolicy : public IConfigurable {
 public:
     CHunpinSchemePolicy();
 

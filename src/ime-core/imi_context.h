@@ -204,7 +204,7 @@ protected:
 
 typedef std::vector<unsigned> TPath;
 
-class CIMIContext
+class _IMPEXP CIMIContext
 {
 public:
     CIMIContext ();

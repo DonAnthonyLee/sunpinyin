@@ -48,7 +48,7 @@
 /**
  * A forget all history memory
  */
-class CICHistory {
+class _IMPEXP CICHistory {
 public:
     /** don't care word id, or separator word id */
     static const uint32_t DCWID;
@@ -113,7 +113,7 @@ public:
     virtual void initStopWords() = 0;
 };
 
-class CBigramHistory : public CICHistory {
+class _IMPEXP CBigramHistory : public CICHistory {
 public:
     static void initClass();
 

@@ -70,7 +70,7 @@ private:
     bool m_bEnabled;
 };
 
-class CGetFuzzySegmentsOp : private CNonCopyable
+class _IMPEXP CGetFuzzySegmentsOp : private CNonCopyable
 {
 public:
     typedef std::map<unsigned,
@@ -99,7 +99,7 @@ private:
     CFuzzySyllableMap m_fuzzyProMap;
 };
 
-class CQuanpinSegmentor : public IPySegmentor
+class _IMPEXP CQuanpinSegmentor : public IPySegmentor
 {
 public:
     CQuanpinSegmentor ();

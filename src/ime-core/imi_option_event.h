@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "utils.h"
+#include "portability.h"
 
 class COptionEventBus;
 
@@ -57,7 +58,7 @@ struct COptionEvent {
     } value;
 };
 
-class IConfigurable
+class _IMPEXP IConfigurable
 {
 public:
     IConfigurable();

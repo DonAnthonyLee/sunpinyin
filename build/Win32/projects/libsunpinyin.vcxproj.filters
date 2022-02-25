@@ -225,5 +225,11 @@
     <ClInclude Include="..\..\..\src\sunpinyin.h">
       <Filter>Head files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_option_event.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ime-core\imi_data.h">
+      <Filter>Head files\ime-core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -95,7 +95,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(OutDir)..\..\..\..\..;$(OutDir)..\..\..\..\..\libs\sqlite-build;$(OutDir)..\..\..\..\..\src;$(OutDir)..\..\..\..\..\src\ime-core;$(OutDir)..\..\..\..\..\src\lexicon;$(OutDir)..\..\..\..\..\src\pinyin;$(OutDir)..\..\..\..\..\src\slm;$(OutDir)..\..\..\..\..\src\slm\getwordfreq;$(OutDir)..\..\..\..\..\src\slm\ids2ngram;$(OutDir)..\..\..\..\..\src\slm\mmseg;$(OutDir)..\..\..\..\..\src\slm\slmbuild;$(OutDir)..\..\..\..\..\src\slm\slminfo;$(OutDir)..\..\..\..\..\src\slm\slmpack;$(OutDir)..\..\..\..\..\src\slm\slmprune;$(OutDir)..\..\..\..\..\src\slm\slmseg;$(OutDir)..\..\..\..\..\src\slm\thread;$(OutDir)..\..\..\..\..\src\slm\tools;$(OutDir)..\..\..\..\..\src\slm\tslmendian;$(OutDir)..\..\..\..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -113,7 +113,7 @@
     <Link>
       <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrtd.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir)..\..\..\..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)libsunpinyin.pdb</ProgramDatabaseFile>
@@ -121,12 +121,14 @@
       <TargetMachine>MachineX86</TargetMachine>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(OutDir)..\..\..\..\..;$(OutDir)..\..\..\..\..\libs\sqlite-build;$(OutDir)..\..\..\..\..\src;$(OutDir)..\..\..\..\..\src\ime-core;$(OutDir)..\..\..\..\..\src\lexicon;$(OutDir)..\..\..\..\..\src\pinyin;$(OutDir)..\..\..\..\..\src\slm;$(OutDir)..\..\..\..\..\src\slm\getwordfreq;$(OutDir)..\..\..\..\..\src\slm\ids2ngram;$(OutDir)..\..\..\..\..\src\slm\mmseg;$(OutDir)..\..\..\..\..\src\slm\slmbuild;$(OutDir)..\..\..\..\..\src\slm\slminfo;$(OutDir)..\..\..\..\..\src\slm\slmpack;$(OutDir)..\..\..\..\..\src\slm\slmprune;$(OutDir)..\..\..\..\..\src\slm\slmseg;$(OutDir)..\..\..\..\..\src\slm\thread;$(OutDir)..\..\..\..\..\src\slm\tools;$(OutDir)..\..\..\..\..\src\slm\tslmendian;$(OutDir)..\..\..\..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -143,18 +145,20 @@
     <Link>
       <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrtd.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir)..\..\..\..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)libsunpinyin.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(OutDir)..\..\..\..\..;$(OutDir)..\..\..\..\..\libs\sqlite-build;$(OutDir)..\..\..\..\..\src;$(OutDir)..\..\..\..\..\src\ime-core;$(OutDir)..\..\..\..\..\src\lexicon;$(OutDir)..\..\..\..\..\src\pinyin;$(OutDir)..\..\..\..\..\src\slm;$(OutDir)..\..\..\..\..\src\slm\getwordfreq;$(OutDir)..\..\..\..\..\src\slm\ids2ngram;$(OutDir)..\..\..\..\..\src\slm\mmseg;$(OutDir)..\..\..\..\..\src\slm\slmbuild;$(OutDir)..\..\..\..\..\src\slm\slminfo;$(OutDir)..\..\..\..\..\src\slm\slmpack;$(OutDir)..\..\..\..\..\src\slm\slmprune;$(OutDir)..\..\..\..\..\src\slm\slmseg;$(OutDir)..\..\..\..\..\src\slm\thread;$(OutDir)..\..\..\..\..\src\slm\tools;$(OutDir)..\..\..\..\..\src\slm\tslmendian;$(OutDir)..\..\..\..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -170,7 +174,7 @@
     <Link>
       <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrt.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir)..\..\..\..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -179,11 +183,13 @@
       <TargetMachine>MachineX86</TargetMachine>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrtd.lib</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(OutDir)..\..\..\..\..;$(OutDir)..\..\..\..\..\libs\sqlite-build;$(OutDir)..\..\..\..\..\src;$(OutDir)..\..\..\..\..\src\ime-core;$(OutDir)..\..\..\..\..\src\lexicon;$(OutDir)..\..\..\..\..\src\pinyin;$(OutDir)..\..\..\..\..\src\slm;$(OutDir)..\..\..\..\..\src\slm\getwordfreq;$(OutDir)..\..\..\..\..\src\slm\ids2ngram;$(OutDir)..\..\..\..\..\src\slm\mmseg;$(OutDir)..\..\..\..\..\src\slm\slmbuild;$(OutDir)..\..\..\..\..\src\slm\slminfo;$(OutDir)..\..\..\..\..\src\slm\slmpack;$(OutDir)..\..\..\..\..\src\slm\slmprune;$(OutDir)..\..\..\..\..\src\slm\slmseg;$(OutDir)..\..\..\..\..\src\slm\thread;$(OutDir)..\..\..\..\..\src\slm\tools;$(OutDir)..\..\..\..\..\src\slm\tslmendian;$(OutDir)..\..\..\..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -199,7 +205,7 @@
     <Link>
       <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrt.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir)..\..\..\..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -207,6 +213,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrtd.lib</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -234,9 +242,11 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\src\ime-core\ic_history.h" />
     <ClInclude Include="..\..\..\src\ime-core\imi_context.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_data.h" />
     <ClInclude Include="..\..\..\src\ime-core\imi_defines.h" />
     <ClInclude Include="..\..\..\src\ime-core\imi_funcobjs.h" />
     <ClInclude Include="..\..\..\src\ime-core\imi_options.h" />
+    <ClInclude Include="..\..\..\src\ime-core\imi_option_event.h" />
     <ClInclude Include="..\..\..\src\ime-core\imi_option_keys.h" />
     <ClInclude Include="..\..\..\src\ime-core\imi_uiobjects.h" />
     <ClInclude Include="..\..\..\src\ime-core\imi_view.h" />

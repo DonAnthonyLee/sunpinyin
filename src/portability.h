@@ -85,6 +85,20 @@
     #endif
 #endif // !HOST_OS_GNUC_2
 
+#ifdef HAVE_CONFIG_H
+#ifdef _WIN32
+#define _IMPEXP __declspec(dllexport)
+#elif !defined(_IMPEXP)
+#define _IMPEXP
+#endif
+#else // !HAVE_CONFIG_H
+#ifdef _WIN32
+#define _IMPEXP __declspec(dllimport)
+#elif !defined(_IMPEXP)
+#define _IMPEXP
+#endif
+#endif // HAVE_CONFIG_H
+
 #ifndef HAVE_LOG2
 inline double log2(double x) { return log(x) / M_LN2; }
 #endif
@@ -206,11 +220,11 @@ const TWCHAR WCH_YOUKUOHAO = 0x201D;
 const TWCHAR WCH_SHENGLUEHAO = 0x2026;
 
 
-size_t MBSTOWCS(TWCHAR *pwcs, const char* s, size_t n);
+_IMPEXP size_t MBSTOWCS(TWCHAR *pwcs, const char* s, size_t n);
 
-size_t WCSTOMBS(char* s, const TWCHAR* pwcs, size_t n);
+_IMPEXP size_t WCSTOMBS(char* s, const TWCHAR* pwcs, size_t n);
 
-size_t WCSLEN(const TWCHAR* ws);
+_IMPEXP size_t WCSLEN(const TWCHAR* ws);
 
 namespace std {
 #ifdef HOST_OS_GNUC_2

@@ -45,7 +45,7 @@
 #include "lexicon/pytrie.h"
 #include "imi_defines.h"
 
-class CUserDict
+class _IMPEXP CUserDict
 {
 public:
     CUserDict () : m_fname(NULL), m_db(NULL) {}

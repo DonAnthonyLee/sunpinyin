@@ -51,7 +51,7 @@ class CIMIView;
 
 /*@}*/
 
-class CIMIWinHandler
+class _IMPEXP CIMIWinHandler
 {
 public:
     enum {

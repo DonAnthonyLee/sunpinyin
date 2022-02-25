@@ -51,7 +51,7 @@ void print_wide(const TWCHAR* wstr);
 /**
  * Data of the IM implementation shared by all Desktop/Session(IC)
  */
-class CIMIData {
+class _IMPEXP CIMIData {
 public:
     CIMIData()
         : m_pPinyinTrie(NULL), m_pLM(NULL) { }

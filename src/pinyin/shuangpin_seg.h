@@ -45,7 +45,7 @@
 #include "pinyin_data.h"
 #include <vector>
 
-class CShuangpinSegmentor : public IPySegmentor
+class _IMPEXP CShuangpinSegmentor : public IPySegmentor
 {
 public:
     CShuangpinSegmentor (CShuangpinData::EShuangpinType shpType);
