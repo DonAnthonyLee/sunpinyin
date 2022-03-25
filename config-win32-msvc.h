@@ -14,7 +14,7 @@
 /* #undef HAVE_DCGETTEXT */
 
 /* Define to 1 if the system has the function `exp2'. */
-#define HAVE_EXP2 1
+/* #undef HAVE_EXP2 */
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -50,7 +50,7 @@
 #define HAVE_LOCALE_H 1
 
 /* Define to 1 if the system has the function `log2'. */
-#define HAVE_LOG2 1
+/* #undef HAVE_LOG2 */
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1

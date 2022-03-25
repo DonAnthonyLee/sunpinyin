@@ -52,6 +52,9 @@
 #include <direct.h>
 #include <windows.h>
 #include <userenv.h>
+#ifndef strdup
+#define strdup(s)       _strdup(s)
+#endif
 #endif // !_WIN32
 #include <cassert>
 #include <errno.h>

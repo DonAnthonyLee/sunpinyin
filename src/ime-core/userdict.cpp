@@ -39,6 +39,11 @@
 #include <stdlib.h>
 #include "userdict.h"
 
+#ifdef _WIN32
+#ifndef strdup
+#define strdup(s)       _strdup(s)
+#endif
+#endif
 
 bool
 CUserDict::load(const char  *fname)

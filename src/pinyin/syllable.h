@@ -49,6 +49,7 @@
 #ifdef HAVE_CONFIG_H
 #if defined(_WIN32) && defined(_MSC_VER)
 #include <config-win32-msvc.h>
+#define snprintf        _snprintf
 #else
 #include <config.h>
 #endif

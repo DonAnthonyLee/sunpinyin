@@ -100,6 +100,9 @@
 #endif // HAVE_CONFIG_H
 
 #ifndef HAVE_LOG2
+#ifndef M_LN2
+#define M_LN2   0.693147180559945309417
+#endif
 inline double log2(double x) { return log(x) / M_LN2; }
 #endif
 

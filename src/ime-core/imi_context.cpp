@@ -43,6 +43,10 @@
 #endif
 #endif
 
+#ifndef HAVE_EXP2
+#define exp2(a)         pow((double)2, a)
+#endif
+
 #include <assert.h>
 #include <algorithm>
 #include <functional>
