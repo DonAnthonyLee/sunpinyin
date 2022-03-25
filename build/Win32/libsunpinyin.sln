@@ -9,18 +9,30 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Debug-DDK7.1|x64 = Debug-DDK7.1|x64
+		Debug-DDK7.1|x86 = Debug-DDK7.1|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
+		Release-DDK7.1|x64 = Release-DDK7.1|x64
+		Release-DDK7.1|x86 = Release-DDK7.1|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Debug|x64.ActiveCfg = Debug|x64
 		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Debug|x64.Build.0 = Debug|x64
 		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Debug|x86.ActiveCfg = Debug|Win32
 		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Debug|x86.Build.0 = Debug|Win32
+		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Debug-DDK7.1|x64.ActiveCfg = Debug-DDK7.1|x64
+		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Debug-DDK7.1|x64.Build.0 = Debug-DDK7.1|x64
+		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Debug-DDK7.1|x86.ActiveCfg = Debug-DDK7.1|Win32
+		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Debug-DDK7.1|x86.Build.0 = Debug-DDK7.1|Win32
 		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Release|x64.ActiveCfg = Release|x64
 		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Release|x64.Build.0 = Release|x64
 		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Release|x86.ActiveCfg = Release|Win32
 		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Release|x86.Build.0 = Release|Win32
+		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Release-DDK7.1|x64.ActiveCfg = Release-DDK7.1|x64
+		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Release-DDK7.1|x64.Build.0 = Release-DDK7.1|x64
+		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Release-DDK7.1|x86.ActiveCfg = Release-DDK7.1|Win32
+		{C0AA983B-83EF-4CE5-B277-172FDF43B6C9}.Release-DDK7.1|x86.Build.0 = Release-DDK7.1|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

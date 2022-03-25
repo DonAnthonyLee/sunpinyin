@@ -1,12 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug-DDK7.1|Win32">
+      <Configuration>Debug-DDK7.1</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug-DDK7.1|x64">
+      <Configuration>Debug-DDK7.1</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-DDK7.1|Win32">
+      <Configuration>Release-DDK7.1</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-DDK7.1|x64">
+      <Configuration>Release-DDK7.1</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
@@ -22,28 +38,48 @@
     <ProjectGuid>{c0aa983b-83ef-4ce5-b277-172fdf43b6c9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <ProjectName>libsunpinyin</ProjectName>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -52,7 +88,15 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
   </ImportGroup>
@@ -60,7 +104,15 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
   </ImportGroup>
@@ -68,29 +120,71 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">x86\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|Win32'">x86\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">x86\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|Win32'">x86\$(Configuration)\</IntDir>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|Win32'">true</IgnoreImportLibrary>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|x64'">true</IgnoreImportLibrary>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|x64'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">x86\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|Win32'">x86\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">x86\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|Win32'">x86\$(Configuration)\</IntDir>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|Win32'">true</IgnoreImportLibrary>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|x64'">true</IgnoreImportLibrary>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|x64'">false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <TargetName>libsunpinyin</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <IncludePath>C:\WinDDK\7600.16385.1\inc\crt;C:\WinDDK\7600.16385.1\inc\api;C:\WinDDK\7600.16385.1\inc\api\crt\stl70;C:\WinDDK\7600.16385.1\inc\ddk;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Include</IncludePath>
+    <ReferencePath>C:\WinDDK\7600.16385.1\inc\crt;C:\WinDDK\7600.16385.1\inc\api;C:\WinDDK\7600.16385.1\inc\api\crt\stl70;C:\WinDDK\7600.16385.1\inc\ddk;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Include</ReferencePath>
+    <SourcePath />
+    <LibraryPath>C:\WinDDK\7600.16385.1\lib\win7\amd64;C:\WinDDK\7600.16385.1\lib\Crt\amd64;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Lib\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>C:\WinDDK\7600.16385.1\inc\crt;C:\WinDDK\7600.16385.1\inc\api;C:\WinDDK\7600.16385.1\inc\api\crt\stl70;C:\WinDDK\7600.16385.1\inc\ddk;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Include</IncludePath>
+    <ReferencePath>C:\WinDDK\7600.16385.1\inc\crt;C:\WinDDK\7600.16385.1\inc\api;C:\WinDDK\7600.16385.1\inc\api\crt\stl70;C:\WinDDK\7600.16385.1\inc\ddk;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Include</ReferencePath>
+    <SourcePath />
+    <LibraryPath>C:\WinDDK\7600.16385.1\lib\win7\amd64;C:\WinDDK\7600.16385.1\lib\Crt\amd64;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Lib\x64</LibraryPath>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>libsunpinyin</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <IncludePath>C:\WinDDK\7600.16385.1\inc\crt;C:\WinDDK\7600.16385.1\inc\api;C:\WinDDK\7600.16385.1\inc\api\crt\stl70;C:\WinDDK\7600.16385.1\inc\ddk;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Include</IncludePath>
+    <ReferencePath>C:\WinDDK\7600.16385.1\inc\crt;C:\WinDDK\7600.16385.1\inc\api;C:\WinDDK\7600.16385.1\inc\api\crt\stl70;C:\WinDDK\7600.16385.1\inc\ddk;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Include</ReferencePath>
+    <SourcePath />
+    <LibraryPath>C:\WinDDK\7600.16385.1\lib\Crt\i386;C:\WinDDK\7600.16385.1\lib\win7\i386;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Lib</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|Win32'">
+    <IncludePath>C:\WinDDK\7600.16385.1\inc\crt;C:\WinDDK\7600.16385.1\inc\api;C:\WinDDK\7600.16385.1\inc\api\crt\stl70;C:\WinDDK\7600.16385.1\inc\ddk;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Include</IncludePath>
+    <ReferencePath>C:\WinDDK\7600.16385.1\inc\crt;C:\WinDDK\7600.16385.1\inc\api;C:\WinDDK\7600.16385.1\inc\api\crt\stl70;C:\WinDDK\7600.16385.1\inc\ddk;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Include</ReferencePath>
+    <SourcePath />
+    <LibraryPath>C:\WinDDK\7600.16385.1\lib\Crt\i386;C:\WinDDK\7600.16385.1\lib\win7\i386;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -100,7 +194,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -112,9 +206,45 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrtd.lib</AdditionalDependencies>
-      <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)libsunpinyin.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_X86_;_STATIC_CPPLIB;_NO_CRT_STDIO_INLINE;_STL70_;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msvcrt_winxp.obj;advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrtd.lib;ntstc_msvcrt.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)libsunpinyin.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
@@ -132,7 +262,7 @@
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -144,9 +274,43 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrtd.lib</AdditionalDependencies>
-      <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)libsunpinyin.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-DDK7.1|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_STATIC_CPPLIB;_NO_CRT_STDIO_INLINE;_STL70_;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrtd.lib;ntstc_msvcrt.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)libsunpinyin.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
@@ -161,7 +325,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -173,9 +337,45 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrt.lib</AdditionalDependencies>
-      <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrtd.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_X86_;_STATIC_CPPLIB;_NO_CRT_STDIO_INLINE;_STL70_;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msvcrt_winxp.obj;advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrt.lib;ntstc_msvcrt.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -192,7 +392,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -204,9 +404,44 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrt.lib</AdditionalDependencies>
-      <OutputFile>$(OutDir)libsunpinyin.dll</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;libcd.lib;libcmtd.lib;msvcrtd.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)libsunpinyin.lib</ImportLibrary>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-DDK7.1|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..;$(SolutionDir)..\..\libs\sqlite-build;$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\ime-core;$(SolutionDir)..\..\src\lexicon;$(SolutionDir)..\..\src\pinyin;$(SolutionDir)..\..\src\slm;$(SolutionDir)..\..\src\slm\getwordfreq;$(SolutionDir)..\..\src\slm\ids2ngram;$(SolutionDir)..\..\src\slm\mmseg;$(SolutionDir)..\..\src\slm\slmbuild;$(SolutionDir)..\..\src\slm\slminfo;$(SolutionDir)..\..\src\slm\slmpack;$(SolutionDir)..\..\src\slm\slmprune;$(SolutionDir)..\..\src\slm\slmseg;$(SolutionDir)..\..\src\slm\thread;$(SolutionDir)..\..\src\slm\tools;$(SolutionDir)..\..\src\slm\tslmendian;$(SolutionDir)..\..\src\slm\tslminfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_STATIC_CPPLIB;_NO_CRT_STDIO_INLINE;_STL70_;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>advapi32.lib;userenv.lib;sqlite3.lib;kernel32.lib;user32.lib;msvcrt.lib;ntstc_msvcrt.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\libs\sqlite-build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
