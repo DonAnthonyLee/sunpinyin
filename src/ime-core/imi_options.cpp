@@ -228,10 +228,16 @@ CSimplifiedChinesePolicy::loadResources()
     free(tmp);
 
     std::string history_path = m_user_data_dir + sep + "history";
-    suc &= m_historyCache.loadFromFile(history_path.c_str());
+    if (!m_historyCache.loadFromFile(history_path.c_str())) {
+        fprintf(stderr, "m_historyCache.loadFromFile() failed\n");
+        suc = false;
+    }
 
     std::string user_dict_path = m_user_data_dir + sep + "userdict";
-    suc &= m_userDict.load(user_dict_path.c_str());
+    if (!m_userDict.load(user_dict_path.c_str())) {
+        fprintf(stderr, "m_userDict.load() failed\n");
+        suc = false;
+    }
 
 #if 1
     fprintf(stderr, "data_dir = %s\n", data_dir.c_str());
@@ -347,7 +353,7 @@ CSimplifiedChinesePolicy::createDirectory(char *path)
     return !(access(path, F_OK) != 0 && mkdir(path, S_IRWXU) != 0);
 #else
     DWORD attr;
-    char *p = path;
+    char *p = path + 3;
     while ((p = strchr(p + 1, '\\'))) {
         *p = 0;
         attr = GetFileAttributes(path);
