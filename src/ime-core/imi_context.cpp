@@ -44,6 +44,7 @@
 #endif
 
 #ifndef HAVE_EXP2
+#include <math.h>
 #define exp2(a)         pow((double)2, a)
 #endif
 
