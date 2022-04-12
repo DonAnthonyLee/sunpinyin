@@ -226,6 +226,10 @@ CBigramHistory::loadFromFile(const char *fname)
             }
             CloseHandle(fd);
     }
+    else
+    {
+        suc = loadFromBuffer(NULL, 0);
+    }
 #endif
     return suc;
 }
